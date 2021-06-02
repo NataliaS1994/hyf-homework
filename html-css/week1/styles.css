@@ -1,0 +1,114 @@
+
+body {
+background-color: rgb(184, 190, 197);
+}
+
+#header {
+display: grid;
+grid-template-columns: 2fr 5fr;
+background: grey;
+font-family:initial ;
+color: rgb(229, 229, 233);
+}
+
+#profile_picture {
+height: 200px;
+width: 200px;
+margin-top: 20px;
+margin-bottom: 20px;
+margin-left: 20px;
+}
+
+.name {
+letter-spacing: 0.5em;
+font-weight: bold;
+margin-top: 60px;
+}
+
+.profession {
+letter-spacing: 0.2em;
+margin-top: 30px;
+}
+
+.underline {
+width: 210px;
+height: 5px;
+background: ivory;
+}
+
+.exp {
+background-color: rgb(245, 211, 197);
+padding: 10px;
+}
+
+ul {
+margin-left: 0px;
+font-weight: bold;
+}
+
+.experience
+.education {
+margin-top: 0px;
+}
+
+.exp1{
+margin-left: 50px ;
+display: grid;
+grid-template-columns: 5fr 5fr 4fr;
+       }
+
+.contacts { 
+background-color: rgb(245, 211, 197);
+padding: 10px;
+}
+
+.contact {
+display:flex;
+align-items:center;
+text-decoration:none;
+}
+
+.contact-link {
+border:solid grey 1px;
+width:200px;
+height:20px;
+color:rgb(37, 3, 22);
+text-align:center;
+transition:.7s;
+margin:12px;
+padding:8px;
+}
+
+.contact-link:hover {
+background:grey;
+-webkit-transform:scale(1.1);
+-ms-transform:scale(1.1);
+transform:scale(1.1);
+}
+        
+.contact-coloured {
+border:dark rgba(15, 14, 14, 0.842);
+color:rgb(37, 3, 22);
+}
+        
+.contact-coloured:hover {
+background:rgb(218, 198, 190);
+color:rgb(14, 9, 9);
+}
+
+.fa {
+font-size: 30px;
+width: 40px;
+text-align: center;
+text-decoration: none;
+}
+          
+.fa-phone {
+color: rgb(255, 255, 255);
+}
+
+.fa-linkedin {
+color: rgb(121, 9, 9);
+}
+
+         
