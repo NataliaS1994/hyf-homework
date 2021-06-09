@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+
+/*GENERAL RULES*/
+* {
+  box-sizing: border-box;
+  font-family: Raleway;
+}
+
+body {
+color: #666666;
+background-image: url(Pictures/pexels-pixabay-220182.jpg);
+background-position: center;
+line-height: 1.4em;
+margin: 0px;
+}
+
+.wrapper {
+width: 940px;
+margin: 20px auto 20px auto;
+border: 2px solid #666666;
+background-color: #f0eeee;;
+}
+
+/*HEADER*/
+header {
+text-indent: 100px;
+height: 160px;
+background-color: #f0eeee;
+}
+
+h1 {
+color: black;
+width: 940px;
+height: 50px;
+margin: 0px;
+padding-top: 30px;
+text-transform: uppercase;
+}
+
+/*NAVIGATION*/
+nav {
+color: #ffffff;
+background-color:white;
+height: 50px;
+}
+
+nav ul {
+margin: 0px;
+padding: 15px 0px 15px 0px;
+}
+
+nav li {
+display: inline;
+}
+
+nav li a {
+color: #000000;
+font-weight: bold;
+margin-right: 10px;
+margin-left: 50px;
+text-decoration:none;
+}
+
+nav li a:hover, nav li a.current {
+color: grey
+}
+
+/*MAIN*/
+img {
+  width: 100%;
+}
+
+h4,h6 {
+  text-transform: uppercase;
+  }
+  
+article {
+  display: flex;
+  width:90%;
+  margin:30px auto 0px;
+  text-align: justify;
+}
+
+.right-article {
+width:58%;
+margin-left: 4%;
+}
+
+.left-article {
+width:38%;
+}
+
+.logos {
+  display: flex;
+  flex-wrap:wrap;
+  margin-top:30px;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width:12%;
+  margin-left:8%;
+}
+
+.left-site {
+  font-size:12px;
+}
+
+/*FOOTER*/
+footer {
+  background-color: #7934f8;
+  color:white;
+  display:flex;
+  justify-content: space-around;
+}
+
+p a {
+ text-decoration: none;
+ color: white;
+}
+
+p a:hover {
+  color: grey
+}
+
+/* MEDIA */
+@media (min-width:481px)and (max-width: 800px) {
+  header {
+  padding: 3em, 5em;
+}
+  nav {
+    padding: 0 4em;
+    margin: 0;
+  }
+  .right-article,
+  .left-article {
+   display:block;
+   margin:unset;
+  }
+
+  .left-site {
+    width: 100%;
+    padding: 2rem;
+  } 
+  main h4 {
+  font-size: 1em;
+  }
+  main h6 {
+    font-size: 1em;
+  }
+
+  footer{
+      flex-wrap: wrap;
+  }
+  footer div{
+      width:45%;
+  }
+  footer p {
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width:480px) {
+  header {
+    padding: 1em 2em;
+  }
+
+  nav {
+    padding: 0 1em;
+  }
+
+  .left-article,
+  .right-article {
+    display: block;
+    margin: unset;
+  }
+  .left-site {
+    margin: 1em;
+    width: fit-content;
+  } 
+
+  footer {
+    padding: unset;
+  }
+  main h4 {
+    font-size: 1em;
+    }
+    main h6 {
+      font-size: 1em;
+    }
+    footer {
+      padding: unset;
+    }
+  
+}
