@@ -124,73 +124,78 @@ p a:hover {
 }
 
 /* MEDIA */
-@media (min-width:481px)and (max-width: 800px) {
+@media  screen and (max-width: 823px) {
   header {
-  padding: 3em, 5em;
-}
-  nav {
-    padding: 0 4em;
-    margin: 0;
+      display: flex;
+      padding: 10px 10px 20px 5px;
+      flex-direction: column;
   }
-  .right-article,
-  .left-article {
-   display:block;
-   margin:unset;
-  }
-
-  .left-site {
-    width: 100%;
-    padding: 2rem;
-  } 
-  main h4 {
-  font-size: 1em;
-  }
-  main h6 {
-    font-size: 1em;
-  }
-
   footer{
       flex-wrap: wrap;
   }
   footer div{
       width:45%;
   }
-  footer p {
-    font-size: 1rem;
-  }
 
 }
 
 @media screen and (max-width:480px) {
   header {
-    padding: 1em 2em;
+    display: flex;
+    padding: 10px 10px 20px 5px;
+    flex-direction: column;
   }
 
-  nav {
-    padding: 0 1em;
+  h1{
+    font-size: 16px;
+    padding:10px 15px 10px 15px;
+  }
+  p{
+    font-size: 7px;
+    line-height: 13px;
+   }
+  nav ul{
+    display: flex;
+    flex-direction: column;
+    article{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+   }
+  h4{
+      margin-top: 5px;
+      font-size: 14px;
+  }
+  h6{
+      font-size: 11px;
+  }
+  iframe{
+    width:100px;
+    height: 100px;
+  }
+  .right-article{
+      font-size:11px;
+  }
+  .left-article{
+      font-size:11px;
   }
 
-  .left-article,
-  .right-article {
-    display: block;
-    margin: unset;
+  .right-site{
+      width:100%;
+      margin-left:0px;
   }
-  .left-site {
-    margin: 1em;
-    width: fit-content;
-  } 
+  .left-site{
+      width:100%;
+      margin:0px;
+  }
 
-  footer {
-    padding: unset;
+  footer{
+      flex-wrap: wrap;
+      text-align: center;
   }
-  main h4 {
-    font-size: 1em;
-    }
-    main h6 {
-      font-size: 1em;
-    }
-    footer {
-      padding: unset;
-    }
+  footer div{
+      width:100%;
+  }
+
   
 }
