@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <title>Form2</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <!-- HEADER -->
+            <header>
+                <div class="intro">
+                    <div class="logo"><img src="/smiley_icon.png" width="80" alt="smiley-face"></div>
+                    <nav>
+                        <ul>
+                            <li>Nav1</li>
+                            <li>Nav2</li>
+                            <li>Nav3</li>
+                        </ul>
+                    </nav>
+                </div>
+                <h1>Sign up to yourcustomtailor.com</h1>
+                <!-- PROGRESS -->
+            </header>
+            <h2>Step 2/4 - how can we reach you?</h2>
+            <div>Progress</div>
+            <progress  max="100" value="50"></progress>
+            <p>We will probably need to stay in touch somehow. Let is know how we can reach you?</p>
+            <form action="./3rdStep.html" method="get">
+                <!-- INFO EMAIL -->
+                <div class="info-email">
+                    <label class="form-label" for="email">Email</label><span style="color: red !important; display: inline; float: none;">*</span>     
+                    <input class="form-input" type="email" id="email" name="email" required>
+                    <label class="form-label" for="phone">Phone</label>
+                    <input class="form-input" type="tel" id="phone" name="phone">
+                </div>
+                <!-- INFO PASSWORD -->
+                <div class="info-password">
+                    <label class="form-label" for="password">Password</label><span style="color: red !important; display: inline; float: none;">*</span>     
+                    <input class="form-input" type="password" id="password" name="password" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Must have at least 6 characters' : ''); if(this.checkValidity()) form.password_two.pattern = this.value;" placeholder="Password" required>
+                </div>
+                <!-- INFO PASSWORD RE-ENTER -->
+                <div class="info-pwd">
+                    <label class="form-label" for="password">Re-enter Password</label><span style="color: red !important; display: inline; float: none;">*</span>     
+                    <input class="form-input" type="password" name="pwd" pattern="^\S{6,}$" onchange="this.setCustomValidity(this.validity.patternMismatch ? 'Please enter the same Password as above' : '');" placeholder="Verify Password" required>  
+                </div>
+                <!-- CHECKBOX -->
+                <p>I want to sign up for the newsletter</p>
+                <div class="checkbox">
+                    <label class="form-label">Weekly news</label>
+                    <input type="checkbox" checked>
+                    <label class="form-label">Monthly news</label>
+                    <input type="checkbox" checked>
+                    <label class="form-label">Don't send me news</label>
+                    <input type="checkbox" checked>
+                </div>
+                <!-- SUBMIT BOTTOM -->
+                <div class="clickable-buttom">
+                    <input type="submit" class="clickable-buttom" id="button" name="button" value="Next step">
+                    <!-- <a href="/3rdStep.html">
+                        </a>           -->
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

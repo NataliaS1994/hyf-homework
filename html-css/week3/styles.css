@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  background-color: mintcream;
+}
+body {
+  padding: 1rem 2rem;
+}
+.wrapper {
+  width: 990px;
+  margin: 20px auto 20px auto;
+  border: 2px solid grey;
+  align-items: center;
+  padding: 3rem;
+}
+/* Header/*/
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+}
+nav ul {
+  margin: 0px;
+  padding: 40px 0px 20px;
+  display: flex;
+  list-style-type: none;
+}
+nav li {
+  margin-left: 20%;
+}
+.intro nav {
+  border: gray 1px solid;
+  width: 600px;
+  height: 100px;
+}
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Form */
+form {
+  display: block;
+}
+.form-label {
+  font-weight: bold;
+  margin: 0 1rem;
+}
+.form-input {
+  height: 40px;
+}
+.info-name .info-country .info-address {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+.info-name {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.info-address {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  height: 60px;
+  margin-left: -2em;
+}
+.info-country {
+  margin-left: 1.9rem;
+}
+.info-description {
+  display: flex;
+  flex-direction: row;
+  margin: 3rem;
+  margin-left: 0;
+}
+
+.info-email .info-password .info-pwd {
+  padding: 3rem;
+  display: flex;
+  flex-direction: row;
+}
+.info-email {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.info-password {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+  height: 60px;
+  margin-left: -2rem;
+}
+.info-pwd {
+  margin-left: 8.3rem;
+  padding: 1rem;
+}
+.form-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-category {
+  display: flex;
+  align-items: center;
+}
+.form-selection img {
+  width: 200px;
+  height: 200px;
+  border: grey 1px solid;
+}
+
+.form-selection label {
+  text-align: right;
+}
+.selection {
+  text-align: center;
+  margin: 0.3rem;
+  font-size: 1.3rem;
+  width: 200px;
+}
+div {
+  display: block;
+}
+.categories {
+  display: flex;
+  flex-direction: block;
+  width: 100%;
+}
+.col-right {
+  margin-left: 2rem;
+}
+/* CLICKABLE BOTTOM */
+.clickable-buttom {
+  transition: 0.5s;
+  margin-left: 20rem;
+  padding: 1rem;
+}
+.clickable-buttom:hover {
+  color: blue;
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.clickable-buttom a {
+  text-decoration: none;
+  color: black;
+}
