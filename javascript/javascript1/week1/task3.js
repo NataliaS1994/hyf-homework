@@ -13,3 +13,17 @@ if (housePrice < houseCost) {
 else {
     console.log("Peter pays less than the value of the house")
 }
+//Julias's calculation
+var houseWidth = 5
+var houseDepth = 11
+var houseHight = 8
+var gardenSizeInM2 = 70
+var houseCost = 1000000
+let volumeInMeters = houseWidth * houseDepth * houseHight;
+let housePrice = volumeInMeters * 2.5 * 1000 + gardenSizeInM2 * 300;
+if (housePrice < houseCost) {
+    console.log ("Julia pays more than the value of the house")   
+}
+else {
+    console.log("Julia pays less than the value of the house")
+}
