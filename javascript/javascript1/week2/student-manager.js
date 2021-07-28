@@ -36,4 +36,5 @@ addStudentToClass ("student6");
 
 getNumberOfStudents();
 console.dir (class07Students);
+console.log(studentName = " ".trim()); //Using 'trim' I will receive ""
 
