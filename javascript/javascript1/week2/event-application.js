@@ -7,7 +7,7 @@ const weekDays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Frida
 
 function getEventWeekday (daysLeft) {
   const today = new Date ();
-  const result  = today.getDay () + (daysLeft % 7);
+  const dayIndex = (today.getDay() + daysLeft) % 7;
   
   console.log ("The event will be held on" + weekDays[result] + " ");
 }
