@@ -1,45 +1,18 @@
-//Flight booking fullname function
+console.log
 
-function getFullName (firstName, surName) {
-    return firstName + " " + surName;
-  }
-  
-  console.log (getFullName ("Benjamin", "Hughes")); // returns "Benjamin Hughes"
-  
-  //Formal fullname
-  
-  function getFullName (firstName, surName, useFormalName) {
-    if (useFormalName === true) {
-      console.log ("Lord" + " " + firstName + " " + surName); 
-    } else if (useFormalName === false) {
-        console.log (firstName + " " + surName); 
-      } else 
-        console.log ("login-failed")
+function getFullname (firstname, surname, useFormalName = false, gender = 'male') {
+  const fullname = firstname + ' ' + surname;
+
+    if (useFormalName && gender=='male') {
+      return 'Lord ' + fullname;
+    } else if (useFormalName && gender=='female') {
+      return 'Miss ' + fullname;
+    } else {
+      return fullname;
     }
+}
 
-    //What if the person is a woman?
-
-function getFullName (firstName, surName, useFormalName, gender) {
-    if (gender === "woman" && useFormalName === true) {
-      console.log ("Lady" + " " + firstName + " " + surName);
-    } else if (gender === "woman" && useFormalName === false) {
-      console.log (firstName + surName);
-    } else if ( gender === "man" && useFormalName === true) {
-      console.log ("Lord" + firstName + " " + surName);
-    } else if (gender === "man" && useFormalName === false) {
-      console.log (firstName + surName);
-    } else
-      console.log ("login-failed");
-  }
-  
-  getFullName ("Natalia", "Sowa", true, "woman"); // returns "Lady Natalia Sowa"
-  getFullName ("Natalia", "Sowa", false, "woman"); // returns "Natalia Sowa"
-  getFullName ("Benjamin", "Hughes", true, "man"); // returns "Lord Benjamin Hughes"
-  getFullName ("Benjamin", "Hughes", false, "man"); // returns "Benjamin Hughes"
-  getFullName ("Benjamin", "Hughes", false, "x"); // returns "login-failed"
-  
-  
-  
-  getFullName ("Benjamin", "Hughes", true); //returns "Lord Benjamin Hughes"`
-  getFullName ("Benjamin", "Hughes", false); // returns "Benjamin Hughes"
-  getFullName ("Benjamin", "Hughes", false); // login-failed
+const fullname1 = getFullname('Benjamin', 'Hughes','true', 'male');
+const fullname2 = getFullname('Benjamin', 'Emilie','true', 'female');
+console.log(fullname1);
+console.log(fullname2); 
