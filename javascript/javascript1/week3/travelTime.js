@@ -1,12 +1,12 @@
- //When will we be there??
+//When will we be there??
 
 const travelInformation = {
     speed: 50,
     destinationDistance: 432,
 };
 
-function getArrivalTime() {
-    const approxTime = travelInformation.destinationDistance / travelInformation.speed;
+function getArrivalTime (travelInformation) {
+    const approxTime = 432 / 50;
     let hours = Math.floor(approxTime);
     let minutes = Math.floor((approxTime % 1) * 60);
 
@@ -18,4 +18,4 @@ const travelTime = getArrivalTime(travelInformation);
 console.log((travelTime)); // 8 hours and 38 minutes
 
 
-getArrivalTime();
+getArrivalTime(); 
