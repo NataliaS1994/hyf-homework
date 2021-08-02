@@ -23,7 +23,7 @@ function getNote(id) {
 		if (typeof id === 'number' && id === notes[i].id) {
 			return notes[i];
 		} else {
-			return console.log('Error');
+			console.log('Error');
 		}
 	}
 }
