@@ -3,27 +3,22 @@ console.log("Script loaded");
 const products = getAvailableProducts();
 console.log(products);
 
-//--------------------------------------------------------------
-let productList = document.createElement('ul');
-
-const body = document.querySelector('body');
-
-document.body.appendChild(productList);
+//creating reference
+let element = document.getElementById('product-list')
 
 function renderProducts(products) {
+    for (let i=0; i<products.length; i++) {
+        let list = document.createElement('li')
+        let price = document.createElement('span')
+        let ratings = document.createElement('span')
 
-    for (let i = 0; i < products.length; i++) {
-        let title = document.createElement('li');
-        let price = document.createElement('span');
-        let rating = document.createElement('span');
+        list.innerHTML = products[i].name
+        price.innerHTML = `Price: ${products[i].price}`
+        ratings.innerHTML = `Rating: ${products[i].rating}`
 
-        title.innerHTML = 'Product: ' + products[i].name;
-        price.innerHTML = ' Price: ' + products[i].price;
-        rating.innerHTML = ' Rating: ' + products[i].rating;
-
-        title.appendChild(price);
-        title.appendChild(rating);
-        productList.appendChild(title);
+        element.appendChild(list);
+        list.appendChild(price);
+        list.appendChild(ratings);
     }
 }
 
