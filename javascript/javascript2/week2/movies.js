@@ -31,3 +31,16 @@ const moviesWithTag = movies.map(movie => {
   )).length;
   
   console.log(amountOfWords);
+  
+  //Create an array of movies where a word in the title is duplicated
+let duplicatedWords = [];
+movies.map((moviesTitle) => moviesTitle.title.split("")) 
+  .forEach((title) =>
+    title.filter((word, index) => {
+      if (title.indexOf(word) != index) {
+        duplicatedWords.push(title.join(" "));
+      }
+    })
+  );
+console.log(duplicatedWords);
+
