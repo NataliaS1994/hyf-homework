@@ -19,4 +19,15 @@ const moviesWithTag = movies.map(movie => {
     }
   });
   console.log(moviesWithTag);
+
+  //Using chaining, first filter the movies array to only contain the movies rated higher than 6 & then map
+ let highRates= movies.filter (movie => movie.rating > 6).map(movie => movie.rating);
+
+ //Count the total number of movies containing any of following keywords: Surfer, Alien or Benjamin
+ const amountOfWords = movies.filter (movie => (
+    movie.title.includes("Surfer") 
+    || movie.title.includes("Alien") 
+    || movie.title.includes("Benjamin")
+  )).length;
   
+  console.log(amountOfWords);
