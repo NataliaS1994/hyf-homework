@@ -16,5 +16,7 @@ const moviesWithTag = movies.map(movie => {
       movie.tag = "Average"
     } else {
       movie.tag = "Bad"
-  })
+    }
+  });
   console.log(moviesWithTag);
+  
