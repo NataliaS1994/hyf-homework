@@ -31,11 +31,11 @@ const maximumPrice = document.getElementById("maximumPrice");
 let userInputPrice = maximumPrice.addEventListener("input", getTheMaximumPrice);
 
 function getTheMaximumPrice(e) {
-  const maxValue = number(e.target.value);
-  if (maxValue) {
-    const compareValue = products.filter(
-      (product) => product.price <= maxValue
+  const maximumValue = number(e.target.value);
+  if (maximumValue) {
+    const outcome = products.filter(
+      (product) => product.price <= maximumValue
     );
-    renderProducts(compareValue);
+    renderProducts(outcome);
   } 
 }
