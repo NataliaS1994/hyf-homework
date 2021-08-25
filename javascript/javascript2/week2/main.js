@@ -24,3 +24,12 @@ function renderProducts(products) {
 }
 
 renderProducts(products);
+
+const inputName = document.querySelector("#nameFilter");
+
+//Filter by product name
+inputName.addEventListener("keyup", () => {
+    showedProduts = products.filter(listing => listing.name.toLowerCase().includes(inputName.value.toLowerCase()));
+    list.innerHTML = "";
+    renderProducts(showedProduts);
+})
