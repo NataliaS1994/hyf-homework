@@ -39,3 +39,15 @@ function getTheMaximumPrice(e) {
     renderProducts(outcome);
   } 
 }
+//Add filter by name
+const inputName = document.getElementById("inputName");
+
+let userInputName = inputName.addEventListener("keyup", getTheInputName);
+
+function getTheInputName(e) {
+    const filteredProducts = e.target.value.toLowerCase();
+    const outcome = products.filter((product) => 
+    product.name.toLowerCase().includes (filteredProducts)
+      );
+      renderProducts(outcome);
+  }
