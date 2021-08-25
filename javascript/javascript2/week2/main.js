@@ -25,11 +25,17 @@ function renderProducts(products) {
 
 renderProducts(products);
 
-const inputName = document.querySelector("#nameFilter");
+//Add filter by max price
+const maximumPrice = document.getElementById("maximumPrice");
 
-//Filter by product name
-inputName.addEventListener("keyup", () => {
-    showedProduts = products.filter(listing => listing.name.toLowerCase().includes(inputName.value.toLowerCase()));
-    list.innerHTML = "";
-    renderProducts(showedProduts);
-})
+let userInputPrice = maximumPrice.addEventListener("input", getTheMaximumPrice);
+
+function getTheMaximumPrice(e) {
+  const maxValue = number(e.target.value);
+  if (maxValue) {
+    const compareValue = products.filter(
+      (product) => product.price <= maxValue
+    );
+    renderProducts(compareValue);
+  } 
+}
