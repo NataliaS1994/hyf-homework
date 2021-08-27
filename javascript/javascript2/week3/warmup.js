@@ -22,3 +22,17 @@ const clickedButton = document.getElementById('click-button');
 clickedButton.addEventListener('click', () => {
     myFunction(5, 'This string logged after 5 seconds');
 });
+//Create two functions and assign them to two different variables. One function logs out Earth, the other function logs out Saturn. 
+function earthLogFunction() {
+    console.log('Earth');
+}
+function saturnLogFunction() {
+    console.log('Saturn');
+}
+
+function planetLogFunction(callback) {
+    callback();
+}
+
+planetLogFunction(earthLogFunction);
+planetLogFunction(saturnLogFunction);
