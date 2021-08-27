@@ -33,6 +33,39 @@ function saturnLogFunction() {
 function planetLogFunction(callback) {
     callback();
 }
+//Create a function called runAfterDelay. It has two parameters: delay and callback. 
+function runAfterDelay (delay, callback) {
+    setTimeout(() => {
+        callback();
+    }, delay * 1000);
+}
 
-planetLogFunction(earthLogFunction);
-planetLogFunction(saturnLogFunction);
+runAfterDelay(1.5, () => {
+console.log('Should be logged after 1.5 seconds');
+});
+runAfterDelay(3, () => {
+    console.log('Should be logged after 3 seconds');
+});
+runAfterDelay(7, () => {
+    console.log('Should be logged after 7 seconds');
+});
+//Create a button with the text called "Log location". When this button is clicked the location (latitude, longitude) of the user should be logged out.
+const logbtn = document.getElementById("location");
+const userLocation = document.getElementById("yourLocation");
+
+logbtn.addEventListener("click", getLocation);
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) =>
+        (userLocation.innerHTML =
+          "Latitude : " +
+          position.coords.latitude.toFixed(4) +
+          "<br>Logitude: " +
+          position.coords.longitude.toFixed(4))
+    );
+  } else {
+    logbtn.innerHTML = "Geolocation is not supported by your browser.";
+  }
+}
