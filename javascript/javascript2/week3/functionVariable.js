@@ -31,7 +31,7 @@ const newfunction = function () {
 
   //Create an object that has a key whose value is a function. Try calling this function.
   const createObject = {
-    user: function personalInfo(age, height) {
+    user: function personalInfo(age, nationality) {
       const userAge = 27;
       const userNationality = "Polish";
       return `This person is ${userAge} years old, ${userNationality}`;
