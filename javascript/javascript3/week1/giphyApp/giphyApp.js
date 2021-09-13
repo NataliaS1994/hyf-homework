@@ -19,7 +19,7 @@ function getDataFromGify() {
 }
 
 function limitNumberOfGifs() {
-    const number = inputNumber.value;
+    const number = numberInput.value;
     if (!isNaN(number) && number > 0) {
         const limitedUrlsArray = imgUrlArray.slice(0, number);
         renderGifs(limitedUrlsArray);
