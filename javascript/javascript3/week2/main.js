@@ -22,3 +22,9 @@ async function getBadMovies() {
 	});
 }
 console.log("I am called asynchronously")
+
+//Using async/await
+async function asyncAwaitExample() {
+	const promise = await makePromise(8);
+	console.log("I am called asynchronously")
+}
