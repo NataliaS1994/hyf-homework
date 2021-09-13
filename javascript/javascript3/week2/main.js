@@ -28,3 +28,32 @@ async function asyncAwaitExample() {
 	const promise = await makePromise(8);
 	console.log("I am called asynchronously")
 }
+
+//REWRITE TIME
+//Rewrite setTimeout to promises
+function setTimeoutPromise(timeout) {
+	return new Promise(resolve => {
+		setTimeout(() => {
+			resolve();
+		}, timeout);
+	});
+}
+setTimeoutPromise(3000).then(() => {
+	console.log("Called after 3 seconds");
+});
+
+//Rewrite navigator.geolocation.getCurrentPosition to promises
+function getCurrentLocation(timeout) {
+	return new Promise((resolve, reject) => {
+		navigator.geolocation.getCurrentPosition((position) => resolve(position)), error => reject(error)
+	});
+};
+getCurrentLocation()
+	.then((position) => {
+		// called when the users position is found
+		console.log(position);
+	})
+	.catch((error) => {
+		// called if there was an error getting the users location
+		console.log(error);
+	});
