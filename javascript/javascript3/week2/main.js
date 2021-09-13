@@ -57,3 +57,20 @@ getCurrentLocation()
 		// called if there was an error getting the users location
 		console.log(error);
 	});
+//Fetching & waiting
+new Promise((resolve) =>
+	setTimeout(() =>
+		fetch("https://yesno.wtf/api")
+		.then(response => response.json())
+		.then(data => resolve(data.answer)),
+		3000)).then(data => console.log('the response is:', data));
+
+//using async/await
+function getData() {
+	setTimeout(async() => {
+		const fetchedResponse = await fetch("https://yesno.wtf/api");
+		const fetchedData = await fetchedResponse.json();
+		const answer = fetchedData.answer;
+		console.log("async function: ", answer);
+	}, 3000)
+}
