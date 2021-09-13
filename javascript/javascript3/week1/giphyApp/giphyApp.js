@@ -1,6 +1,6 @@
 const btnGetGif = document.getElementById('btnGetGif');
 const numberInput = document.getElementById('numberInput');
-const displayResult = document.getElementById("searchResult");
+const displayResult = document.getElementById("searchInput");
 
 btnGetGif.addEventListener("click", getDataFromGify);
 numberInput.addEventListener("input", limitNumberOfGifs);
