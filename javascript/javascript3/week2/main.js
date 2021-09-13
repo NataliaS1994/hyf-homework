@@ -14,3 +14,11 @@ async function getBadMovies() {
     }
   }
   getBadMovies();
+
+  //Promise that resolves after set time
+  function makePromise(resolveAfter) {
+	return new Promise((resolve) => {
+		setTimeout(() => resolve(), resolveAfter * 3000);
+	});
+}
+console.log("I am called asynchronously")
