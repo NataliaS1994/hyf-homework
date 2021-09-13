@@ -1,0 +1,9 @@
+{
+	"name": "Natalia",
+	"age": 27,
+	"address": {
+		"street": "Frederiksundvej12",
+		"city": "Frederiksberg"
+	},
+	"interests": ["cooking", "biking", "swimming", "coding"]
+}

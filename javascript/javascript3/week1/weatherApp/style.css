@@ -1,0 +1,53 @@
+body {
+    background-color: lightgray;
+    text-align: center;
+}
+
+
+.flex-box {
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    margin: 1em 1em;
+    font-size:1.2em;
+}
+
+input[type=button] {
+    background-color:green;
+    color: white;
+    padding: 15px;
+    text-decoration: none;
+}
+
+#map {
+    margin: 2em auto;
+    height: 400px;
+    width: 400px;
+}
+
+#temp {
+    font-size: 80px;
+}
+
+
+#arrow:after {
+    content: "";
+    display: inline-block !important;
+    width: 0;
+    height: 0;
+    border-left: 8px solid black;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    vertical-align: middle;
+}
+
+#arrow:before {
+    width: 20px;
+    height: 2px;
+    background: black;
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+} 
