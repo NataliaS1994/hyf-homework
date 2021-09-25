@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Shopping cart using Classes</title>
+</head>
+<body>
+    <!-- HEADING & CURRENCY -->
+  <header>
+    <h1 class="title">Calvin Klein's shopping bag</h1>
+    <div class="currency">currency
+      <select name="currency" id="currency">
+        <option value="DKK">DKK</option>
+        <option value="EUR">EUR</option>
+      </select>
+    </div>
+</header>
+    <!-- PRODUCT OPTIONS & TOTAL PRICE -->
+<main>
+  <label for="product-options">Choose the product:</label>
+  <select  id="product-options">
+      <option value=""></option>
+  </select>
+  <button id="add-to-cart" class="button">Add to shopping bag</button>
+
+  <section class="Shopping-basket">
+    <p id="username" class="paragraph"></p>
+    <ul id="ul"></ul>
+    <div id="Total-price">
+        <p id="total" class="paragraph"></p>
+      </div>
+  
+    </section>
+  </main>   
+  <!-- FOOTER/POLICY -->
+  <footer>
+      <h4>Our Promises</h4>
+      <p>Free delivery</p>
+      <p>100 days return policy</p>
+      <p>Free returns</p>
+  </footer>
+      <script src="main.js"></script>
+    </body>
+  </html> 
