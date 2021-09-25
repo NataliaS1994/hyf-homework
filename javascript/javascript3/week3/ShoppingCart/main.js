@@ -106,7 +106,7 @@ renderProductsDropDown();
 
 addButton.addEventListener("click", () => {
     if (!selectElement.value) {
-        alert("You didn't select any product");
+        alert("You didn't select the product");
         return;
     }
     const product = myProducts.find(product => {
