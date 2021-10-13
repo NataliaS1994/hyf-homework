@@ -1,8 +1,18 @@
 //Create an array of movies containing the movies with a short title 
-const shortTitleMovies = movies.filter (movie => movie.title.length <= 3);
+const { movies } = require(`./movies`);
+
+const shortTitleArray = movies
+  .filter((str) => str.title.length <= 3)
+  .map((str) => str.title);
+
+console.log(shortTitleArray);
 
 //Create an array of movie titles with long movie titles
-const longTitleMovies = movies.filter(movie => movie.title.length >= 30);
+const longTitleArray = movies
+  .filter((name) => name.title.length >= 30)
+  .map((name) => name.title);
+
+console.log(longTitleArray);
 
 //Count the number of movies made between 1980-1989 (including both the years)
 const moviesFromTheEighties = movies.filter (movie => (movie.year > 1980 && movie.year <= 1989).length);
