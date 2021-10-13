@@ -1,10 +1,8 @@
 -- Part 3: More queries 
 
 -- Get all the tasks assigned to users whose email ends in @spotify.com
-SELECT task.title, user.name, user.email
-FROM task
-JOIN user_task ON task.id = user_task.task_id
-JOIN user ON user.id = user_task.user_id
+SELECT task.id,user.id AS UI,task.title,user.email ,user.name from task
+JOIN user ON task.user_id=user.id
 WHERE user.email like "%@spotify.com";
 
 
