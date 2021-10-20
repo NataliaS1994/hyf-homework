@@ -8,7 +8,7 @@ class Circle {
     }
 
     getDiameter() {
-       return 2 * this.radius;
+        return Math.PI * this.radius * 2;
       }
     
     getCircumference() {
@@ -19,7 +19,7 @@ class Circle {
         return Math.PI * this.radius * this.radius;
     }
 }
-const circleTen = new Circle(10);
-console.log(circleTen.getDiameter()); // 20
-console.log(circleTen.getCircumference()); 
-console.log(circleTen.getArea()); 
+const circle = new Circle(10);
+console.log(circleTen.getDiameter()); // 20)
+console.log(circleTen. getCircumference());
+console.log(circleTen. getArea());
