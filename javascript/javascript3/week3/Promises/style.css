@@ -1,13 +1,8 @@
 body {
-    background-color: powderblue;
+    background-color: beige;
   }
   h1 {
     color: blue;
     font-family: courier;
   }
-  p {
-    color: red;
-    font-family: courier;
-    font-size: 160%;
-    margin: 50px;
-  }
+ 
