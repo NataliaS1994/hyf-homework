@@ -33,14 +33,15 @@ class Circle {
 }
 
 function getRandomNumber(min, max) {
-    return Math.random() * (max - min) + min;
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
 function getRandomColor() {
     const letters = "0123456789ABCDEF";
     let color = "#";
     for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 15)];
+        color += letters[Math.floor(Math.random() * 16)];
+    let randomColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
     }
     return color;
 }
