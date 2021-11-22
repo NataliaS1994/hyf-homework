@@ -1,0 +1,18 @@
+.app {
+  min-height: 100vh;
+  background: burlywood;
+  display: flex;
+  justify-content: space-around;
+}
+.list {
+  height: 300px;
+  width: 300px;
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid black;
+}
+
