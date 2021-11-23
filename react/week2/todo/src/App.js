@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
 import "./App.css";
 import data from "./data/data.json";
 import Header from "./components/Header";
@@ -6,19 +6,19 @@ import Timer from "./components/Timer";
 import TodoList from "./components/TodoList";
 
 function App() {
-  // hooks
-  const [state, setState] = useState(null);
-  if (state === null) setTimeout(() => setState(data), 3000);
-
+  const [time, setTime] = useState(null);
+  useEffect(() => {
+    if (time === null) setTimeout(() => setTime(data), 3000);
+    return () => {
+      clearInterval();
+    };
+  }, []);
   return (
-
-    <div className="App">
+    <div>
       <Header />
       <Timer />
-      {state ? <TodoList items={state} /> : <p>Loading...</p>}
+      {time ? <TodoList items={time} /> : <p>Loading...</p>}
     </div>
   );
 }
-
-
 export default App;
