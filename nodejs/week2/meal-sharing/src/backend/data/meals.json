@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "title" : "Indian food in the summer",
+        "maxNumberOfGuests" : 5,
+        "description" : "A nice night out eating delicious indian food",
+        "createdAt" : "2019/12/7 14:34",
+        "price" : 67
+    },
+    {
+        "id" : 2,
+        "title" : "Polish food in the winter",
+        "maxNumberOfGuests" : 7,
+        "description" : "A nice night out eating traditional polish food",
+        "createdAt" : "2020/10/7 19:30",
+        "price" : 81
+    },
+    {
+        "id" : 3,
+        "title" : "Thai food in the autumn",
+        "maxNumberOfGuests" : 10,
+        "description" : "A nice night out eating spicy thai food",
+        "createdAt" : "2020/05/9 19:30",
+        "price" : 65
+    }
+]
