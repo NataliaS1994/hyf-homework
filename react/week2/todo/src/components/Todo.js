@@ -1,72 +1,72 @@
 import React, { useState } from "react";
 
 function Todo(props) {
-  const [state, setDone] = useState([...props.items]);
+  const [state, setTodos] = useState([...props.todos]);
 
   const addTodo = () => {
-    // Add random item
-    const addRandomItem = (arr) => {
+    // Add random todo
+    const addRandomTodo = (arr) => {
       const newId = arr.length
-        ? Math.max(...arr.map((item) => item.id)) + 1
+        ? Math.max(...arr.map((todo) => todo.id)) + 1
         : 1;
-      const addRandomArr = arr.concat({
+      const newTodos = arr.concat({
         id: newId,
         description: "Go to school",
         done: false,
       });
-      setDone(addRandomArr);
+      setTodos(newTodos);
     };
 
     return (
       <button
         onClick={() => {
-          addRandomItem(state);
+          addRandomTodo(state);
         }}
       >
         Add todo{" "}
       </button>
     );
   };
-  //Mark todo item as done
+  //Mark todo todo as done
   const handleCheck = (id) => {
-    const newState = state.map((item) => {
-      if (item.id === id) {
-        return { ...item, done: !item.done };
+    const newState = state.map((todo) => {
+      if (todo.id === id) {
+        return { ...todo, done: !todo.done };
       }
-      return item;
+      return todo;
     });
-    setDone(newState);
+    setTodos(newState);
   };
 
-  //Delete item
-  const deleteItem = (id) => {
-    setDone(state.filter((item) => item.id !== id));
+  //Delete todo
+  const deleteTodo = (id) => {
+    setTodos(state.filter((todo) => todo.id !== id));
   };
 
-  const items = state.map((item) => {
+  const todos = state.map((todo) => {
     return (
-      <li key={item.id}>
-        <span className={item.done ? "line-through" : "no-decoration"}>
+      <li key={todo.id}>
+        <span className={todo.done ? "line-through" : "no-decoration"}>
           {" "}
-          {item.description}{" "}
+          {todo.description}{" "}
         </span>{" "}
         <input
           type="checkbox"
-          name={item.description}
-          checked={item.done && "checked"}
-          onChange={() => handleCheck(item.id)}
+          name={todo.description}
+          checked={todo.done && "checked"}
+          onChange={() => handleCheck(todo.id)}
         />{" "}
-        <button onClick={() => deleteItem(item.id)}> Delete </button>{" "}
+        <button onClick={() => deleteTodo(todo.id)}> Delete </button>{" "}
       </li>
     );
   });
 
-  //If no items render "No items"
+  //If no todos render "No todos"
   return (
     <>
       {" "}
-      {addTodo()} {state.length === 0 && <span> No items </span>}{" "}
-      <ul> {items} </ul>{" "}
+      {addTodo()} {state.length === 0 && <span> No todos </span>}{" "}
+      <ul> {todos} </ul>{" "}
     </>
   );
 }

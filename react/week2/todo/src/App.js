@@ -17,7 +17,7 @@ function App() {
     <div>
       <Header />
       <Timer />
-      {time ? <TodoList items={time} /> : <p>Loading...</p>}
+      {time ? <TodoList todos={time} /> : <p>Loading...</p>}
     </div>
   );
 }
