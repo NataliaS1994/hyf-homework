@@ -9,9 +9,6 @@ function App() {
   const [time, setTime] = useState(null);
   useEffect(() => {
     if (time === null) setTimeout(() => setTime(data), 3000);
-    return () => {
-      clearInterval();
-    };
   }, []);
   return (
     <div>
