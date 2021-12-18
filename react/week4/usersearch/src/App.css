@@ -1,0 +1,30 @@
+* {
+    background-color: #AAAAAA;
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+}
+
+.App {
+    text-align: center;
+}
+
+.inputText {
+    color: blue;
+}
+
+.loading {
+    text-align: center;
+}
+
+.result {
+    text-align: center;
+    list-style-type: none;
+}
+
+.listing {
+    text-align: center;
+    list-style-type: none;
+}
