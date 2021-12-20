@@ -1,5 +1,7 @@
 Spinach
 Carrots
-Broccoli
+Root
 Garlic
 Kale
+Onion 
+Pumpkin
