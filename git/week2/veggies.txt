@@ -5,3 +5,6 @@ parsley
 basil
 okra
 lettuce
+paprika
+parsley
+basil
