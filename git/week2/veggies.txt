@@ -1,13 +1,10 @@
 Spinach
 Carrots
-<<<<<<< HEAD
 Root
 Garlic
 Kale
 Onion 
 Pumpkin
-=======
 Potatoes
 Garlic
 Kale
->>>>>>> 75a6d04b9f7744cb801e3ed37dcd19e313aaaf19
