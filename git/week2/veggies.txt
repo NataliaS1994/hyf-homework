@@ -1,5 +1,7 @@
 garlic
 onion
-leek
+potatoes
 parsley
 basil
+okra
+lettuce
