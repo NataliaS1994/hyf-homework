@@ -1,10 +1,17 @@
 const e = require("express");
 const express = require("express");
-const router = express.Router();
-// const knex = require("../database");
-// const { request, response } = require("express");
+const app = express();
 
-router.get("/", async(request, response) => {
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(
+        express.urlencoded({
+            extended: true
+        })
+    )
+    // Parse JSON bodies (as sent by API clients)
+app.use(express.json())
+
+app.get("/", async(request, response) => {
     try {
         console.log("this is a calculator");
         response.send("Let's get some calculations done");
@@ -14,28 +21,28 @@ router.get("/", async(request, response) => {
 });
 
 // GET section
-router.get("/add", (request, response) => {
+app.get("/add", (request, response) => {
     const result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) + Number(b), 0);
     response.send(`This is the result ${result}`);
 });
 
-router.get("/sub", (request, response) => {
+app.get("/sub", (request, response) => {
     const result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) - Number(b));
     response.send(`This is the result ${result}`);
 });
 
-router.get("/multiply", (request, response) => {
+app.get("/multiply", (request, response) => {
     let result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) * Number(b));
     response.send(`This is the result ${result}`);
 });
 
-router.get("/divide", (request, response) => {
+app.get("/divide", (request, response) => {
     let result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) / Number(b));
@@ -44,32 +51,32 @@ router.get("/divide", (request, response) => {
 
 // POST section
 
-router.post("/add", (request, response) => {
+app.post("/add", (request, response) => {
     const result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) + Number(b), 0);
     response.send(`This is the result ${result}`);
 });
 
-router.post("/sub", (request, response) => {
+app.post("/sub", (request, response) => {
     const result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) - Number(b));
     response.send(`This is the result ${result}`);
 });
 
-router.post("/multiply", (request, response) => {
+app.post("/multiply", (request, response) => {
     let result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) * Number(b));
     response.send(`This is the result ${result}`);
 });
 
-router.post("/divide", (request, response) => {
+app.post("/divide", (request, response) => {
     let result = Object.values(request.query)
         .flat()
         .reduce((a, b) => Number(a) / Number(b));
     response.send(`This is the result ${result}`);
 });
 
-module.exports = router;
+module.exports = app;
